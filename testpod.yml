@@ -7,6 +7,6 @@ metadata:
 spec:
   containers:
   - name: demotest
-    image: kalyan-testing/automation-repo
+    image: kalyanmisra/automation-repo
     ports:
     - containerPort: 3000
