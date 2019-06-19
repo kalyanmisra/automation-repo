@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: firstnodeworld.example.com
+  labels:
+    app: first-helloworld
+spec:
+  containers:
+  - name: demotest
+    image: kalyan-testing/automation-repo
+    ports:
+    - containerPort: 3000
