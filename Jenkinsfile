@@ -1,15 +1,20 @@
 pipeline {
-    agent any
+    agent {label 'jenkins-slave1'}
     stages {
-        stage('Example Build') {
+        stage('Build') {
+            input {
+                message "Should we continue?"
+                ok "Yes, we should."
+                submitter "alice,bob"
+                parameters {
+                    string(name: 'PERSON', defaultValue: 'Kalyan Misra', description: 'Approved by $defaultValue')
+                }
+            } 
             steps {
-                echo 'Hello World'
+                echo 'Build Successful'
             }
         }
-        stage('Example Deploy') {
-            when {
-                branch 'production'
-            }
+        stage('Deploy') {
             steps {
                 echo 'Deploying'
             }
