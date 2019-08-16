@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: firstnodeworld.example.com
   labels:
-    app: first-helloworld
+    app: second-helloworld
 spec:
   containers:
   - name: demotest
