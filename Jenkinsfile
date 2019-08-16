@@ -24,10 +24,5 @@ pipeline {
 		echo 'Deploying to production'
 	    }
 	}
-	stage('Deployed') {
-	    steps {
-		echo "Done"
-	    }
-	}
     }
 }
