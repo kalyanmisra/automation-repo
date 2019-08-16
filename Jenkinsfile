@@ -19,9 +19,14 @@ pipeline {
                 echo 'Deploying'
             }
         }
-	stage('Prod'){
+	stage('Prod') {
 	    steps {
 		echo 'Deploying to production'
+	    }
+	}
+	stage('Deployed') {
+	    steps {
+		echo "Done"
 	    }
 	}
     }
